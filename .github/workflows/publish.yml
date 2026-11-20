@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          registry-url: https://registry.npmjs.org
       - name: Upgrade npm for Trusted Publishing
         run: npm install --global npm@latest
       - name: Show runtime versions
