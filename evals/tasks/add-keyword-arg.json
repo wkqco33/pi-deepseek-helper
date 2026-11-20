@@ -1,0 +1,15 @@
+{
+  "id": "add-keyword-arg",
+  "title": "Add backward-compatible keyword arguments",
+  "prompt": "The tests in this repository fail. Extend format_name in names.py so every test passes: support order=\"last-first\" and uppercase=True, reject unknown order values with ValueError, and keep the current default output unchanged. Do not modify the test file.",
+  "gate": {
+    "command": "python3",
+    "args": [
+      "-m",
+      "unittest",
+      "-q"
+    ],
+    "timeoutSec": 60
+  },
+  "timeoutSec": 420
+}

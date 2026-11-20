@@ -1,0 +1,7 @@
+{
+  "id": "edge-cases",
+  "title": "Repair a helper whose edge cases are only visible in the tests",
+  "prompt": "Users report that the median helper in stats.py returns wrong numbers. Fix it.",
+  "gate": { "command": "python3", "args": ["-m", "unittest", "-q"], "timeoutSec": 60 },
+  "timeoutSec": 420
+}

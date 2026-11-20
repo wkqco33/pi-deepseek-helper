@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+.work/
+*.log
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.DS_Store

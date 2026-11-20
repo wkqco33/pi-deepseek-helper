@@ -1,0 +1,15 @@
+{
+  "id": "noisy-repro",
+  "title": "Fix a bug whose reproduction prints thousands of lines",
+  "prompt": "reproduce.py prints a failing repro for the chunking helper. Run `python3 reproduce.py` directly, without redirecting or piping its output, then fix core.py so the reproduction passes. Do not modify reproduce.py or the test file.",
+  "gate": {
+    "command": "python3",
+    "args": [
+      "-m",
+      "unittest",
+      "-q"
+    ],
+    "timeoutSec": 60
+  },
+  "timeoutSec": 420
+}

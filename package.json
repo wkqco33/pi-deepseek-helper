@@ -1,0 +1,71 @@
+{
+  "name": "pi-deepseek-helper",
+  "version": "0.1.0",
+  "description": "pi extensions that make flash-tier models usable on long tasks: a verification gate, bounded tool output, escalation routing, and a measurable eval harness",
+  "type": "module",
+  "license": "Apache-2.0",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "flash",
+    "deepseek",
+    "agent",
+    "verification",
+    "eval"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkqco33/pi-deepseek-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wkqco33/pi-deepseek-helper/issues"
+  },
+  "homepage": "https://github.com/wkqco33/pi-deepseek-helper#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "extensions",
+    "src",
+    "scripts/eval.ts",
+    "evals/tasks",
+    "evals/fixtures",
+    "!**/__pycache__",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "test:coverage": "tsx --test --experimental-test-coverage test/*.test.ts",
+    "format": "prettier --write \"{src,extensions,scripts,test}/**/*.ts\"",
+    "format:check": "prettier --check \"{src,extensions,scripts,test}/**/*.ts\"",
+    "pack-check": "node scripts/verify-pack.mjs",
+    "check": "npm test && npm run typecheck && npm run format:check && npm run pack-check",
+    "eval": "tsx scripts/eval.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.5.2",
+    "@types/node": "^24.9.2",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

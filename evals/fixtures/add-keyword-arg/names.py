@@ -1,0 +1,5 @@
+"""Name formatting."""
+
+
+def format_name(first, last):
+    return f"{first} {last}"

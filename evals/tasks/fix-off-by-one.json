@@ -1,0 +1,15 @@
+{
+  "id": "fix-off-by-one",
+  "title": "Fix an off-by-one in a rolling window helper",
+  "prompt": "The tests in this repository fail. Fix the bug in rolling.py so that every test passes. Do not modify the test file.",
+  "gate": {
+    "command": "python3",
+    "args": [
+      "-m",
+      "unittest",
+      "-q"
+    ],
+    "timeoutSec": 60
+  },
+  "timeoutSec": 420
+}

@@ -1,0 +1,14 @@
+{
+  "id": "dedupe-refactor",
+  "title": "Extract duplicated slug logic into one module",
+  "prompt": "users.py and orders.py contain the same slug-cleaning logic. Move it into a new module textutil.py as normalize_slug(value) and have both modules import and use it, keeping the public functions user_slug and order_slug and all tests passing. Do not modify the test file.",
+  "gate": {
+    "command": "bash",
+    "args": [
+      "-c",
+      "python3 -m unittest -q && test -f textutil.py && grep -q textutil users.py && grep -q textutil orders.py"
+    ],
+    "timeoutSec": 60
+  },
+  "timeoutSec": 420
+}
