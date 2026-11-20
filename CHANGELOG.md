@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-20
+
+### Changed
+
+- 첫 CI 배포(Trusted Publishing)로 전환한 릴리스. 기능 변경은 없고, `publish.yml`에 `registry-url`을 추가해 OIDC 교환과 provenance 서명이 동작하도록 했습니다.
+- `0.1.0`은 최초 배포 제약(npm은 패키지가 존재해야 Trusted Publisher 설정 가능) 때문에 수동 배포되어 provenance가 없습니다. 이 버전부터 배포 출처 증명이 첨부됩니다.
+
 ## [0.1.0] - 2026-11-20
 
 ### Added

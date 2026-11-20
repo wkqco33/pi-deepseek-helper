@@ -1,6 +1,6 @@
 {
   "name": "pi-deepseek-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "pi extensions that make flash-tier models usable on long tasks: a verification gate, bounded tool output, escalation routing, and a measurable eval harness",
   "type": "module",
   "license": "Apache-2.0",
